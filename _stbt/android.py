@@ -329,7 +329,7 @@ class AdbDevice():
         if self.adb_device:
             _command += ["-s", self.adb_device]
         _command += command
-        debug("AdbDevice.adb: About to run command: %r\n" % _command)
+        debug("AdbDevice.adb: About to run command: %r" % _command)
         output = subprocess.check_output(
             _command, stderr=subprocess.STDOUT, **kwargs).decode("utf-8")
         return output
